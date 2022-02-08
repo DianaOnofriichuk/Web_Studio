@@ -76,7 +76,7 @@
 
       <section class="description">
         <div class="container">
-          <h2 class="title-hide">
+          <h2 class="visually-hidden">
             Почему мы</h2>
           <ul class="description-list list">
             <li class="description-item">
@@ -347,6 +347,7 @@
 </section>
 </main>
 
+<!-- -------------------footer--------------------- -->
 
   <footer class="footer">
     <div class="container container-footer">
@@ -368,7 +369,7 @@
       </ul>
     </div>
     <div class="footer-right"> 
-      <h3 class="footer-subtitle">присоединяйтесь</h3>
+      <p class="footer-subtitle">присоединяйтесь</p>
        <ul class="footer-icon-list list">
          <li class="footer-icon-list-item">
            <a class="footer-icon-list-link link" href="#">
@@ -400,15 +401,71 @@
          </li>
        </ul>
     </div>
+    <div class="footer-form-wrapper">
+      <P class="footer-subtitle">Подпишитесь на рассылку</P>
+      <form class="footer-form">
+      <label>
+      <input class="footer-form-field" type="email" name="customer-email" placeholder="E-mail">
+    </label>
+      <button class="footer-form-button" type="submit">Подписаться
+        <svg class="footer-form-button-icon">
+          <use href="images/sprites.svg#icon-send"></use>
+        </svg>
+      </button>
+    </form>
+    </div>
   </div>
   </footer>
+
+  <!-- --------------------- modal------------------- -->
+  
  <div class="backdrop is-hidden" data-modal>
  <div class="modal">
    <button type="button" class="botton-close" data-modal-close>
      <svg class="button-close-icon">
        <use href="images/sprites.svg#icon-Vector"></use>
      </svg>
-   </button>
+    </button>
+     <form class="modal-form">
+       <p class="text-modal-form">Оставьте свои данные, мы вам перезвоним</p>
+       <label class="modal-form-label">Имя
+       <span class="modal-form-field-wrapper">
+       <input class="modal-form-field" type="text" name="custumer-name" placeholder=" " required minlength="2">
+         <svg class="modal-form-field-icon">
+           <use href="images/sprites.svg#icon-name"></use>
+         </svg>
+        </span>
+      </label>
+      <label class="modal-form-label">Телефон
+       <span class="modal-form-field-wrapper">
+       <input class="modal-form-field" type="tell" name="custumer-phone" required placeholder=" " minlength="10">
+         <svg class="modal-form-field-icon">
+           <use href="images/sprites.svg#tell"></use>
+         </svg>
+       </span>
+      </label>
+      <label class="modal-form-label">Почта
+       <span class="modal-form-field-wrapper">
+       <input class="modal-form-field" type="email" name="customer-email" required placeholder=" ">
+         <svg class="modal-form-field-icon">
+           <use href="images/sprites.svg#icon-email"></use>
+         </svg>
+       </span>
+      </label>
+
+       <label class="modal-form-label">Комментарий
+       <textarea class="modal-form-textarea" name="comment" placeholder="Введите текст"></textarea>
+      </label>
+      <span class="modal-form-checkbox-wrapper">
+       <input class="modal-form-checkbox visually-hidden" type="checkbox" value="policy" id="policy" required>
+       <label class="modal-form-checkbox-label" for="policy">Соглашаюсь с рассылкой и принимаю &nbsp
+         <a class="modal-form-checkbox-link" href="#">Условия договора</a>
+       </label>
+      </span>
+
+       <button class="modal-button" type="submit">Отправить</button>
+      </form>
+   
  </div>
  </div>
  <script src="./js/modal.js"></script>
